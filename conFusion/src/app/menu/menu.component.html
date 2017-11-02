@@ -9,7 +9,7 @@
     </div>
   </div>
 
-  <div fxFlex>
+  <div fxFlex *ngIf="dishes">
     <md-grid-list cols="2" rowHeight="200px">
       <!-- *ngFor : iterate through all dishes -->
       <md-grid-tile *ngFor="let dish of dishes" [routerLink]="['/dishdetail', dish.id]">
@@ -19,6 +19,10 @@
         </md-grid-tile-footer>
       </md-grid-tile>
     </md-grid-list>
+  </div>
+
+  <div [hidden]="dishes">
+    <md-spinner></md-spinner><h4>Loading . . . Please Wait</h4>
   </div>
 
   
