@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { Feedback, ContactType } from '../shared/feedback';
+import {MdSliderModule} from '@angular/material';
 
 @Component({
   selector: 'app-contact',
@@ -43,7 +44,7 @@ export class ContactComponent implements OnInit {
     },
   };
 
-  
+
 
   constructor(private fb: FormBuilder) {
     this.createForm();
